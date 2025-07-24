@@ -128,48 +128,70 @@ export const PROJECTS = [
     name: "Edifício Solaris",
     location: "São Paulo, SP",
     year: "2023",
-    description: "Construção de edifício residencial de alto padrão com 20 andares e área de lazer completa.",
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    purpose: "Criar um marco arquitetônico residencial que combine luxo, conforto e sustentabilidade, oferecendo uma nova experiência de moradia na metrópole.",
+    description: "O Edifício Solaris é um empreendimento de alto padrão com 20 andares, localizado em uma área nobre de São Paulo. O projeto inclui apartamentos de 3 e 4 suítes, uma área de lazer completa com piscina, academia, spa e salão de festas, além de soluções de automação residencial e captação de água da chuva.",
+    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    partners: ["Construtora Horizonte", "Studio de Arquitetura K&M"]
   },
   {
     category: "Industrial",
     name: "Centro de Distribuição Atakama",
     location: "Campinas, SP",
     year: "2022",
-    description: "Projeto e execução de um centro logístico industrial com mais de 50.000m² de área construída.",
-    image: "https://images.unsplash.com/photo-15875732c4936-a36613534938?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    purpose: "Otimizar a logística e a cadeia de suprimentos de um dos maiores varejistas do país, com um design focado em eficiência e escalabilidade.",
+    description: "Projeto e execução de um centro logístico de última geração, com mais de 50.000m² de área construída. A estrutura foi projetada para maximizar a eficiência de armazenamento e fluxo de mercadorias, utilizando sistemas de automação e docas para carga e descarga simultânea.",
+    image: "https://images.unsplash.com/photo-15875732c4936-a36613534938?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    partners: ["LogiMax Solutions", "TechSteel Estruturas"]
   },
   {
     category: "Ambiental",
     name: "Plano de Recuperação Ambiental",
     location: "Cubatão, SP",
     year: "2023",
-    description: "Consultoria e execução de plano para recuperação de área degradada pela atividade industrial.",
-    image: "https://images.unsplash.com/photo-1503375743844-a937c865147a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    purpose: "Reverter o impacto ambiental de décadas de atividade industrial, restaurando o ecossistema local e promovendo a biodiversidade.",
+    description: "Consultoria e execução de um plano abrangente para a recuperação de uma área de 15 hectares degradada pela atividade industrial. O projeto incluiu análise de solo, remoção de contaminantes, replantio de espécies nativas e monitoramento da fauna e flora local.",
+    image: "https://images.unsplash.com/photo-1503375743844-a937c865147a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    partners: ["Instituto Terra Viva", "Governo do Estado de São Paulo"]
   },
   {
     category: "Obras Públicas",
     name: "Revitalização da Orla",
     location: "Santos, SP",
     year: "2021",
-    description: "Projeto de revitalização urbana da orla da praia, incluindo nova ciclovia e quiosques.",
-    image: "https://images.unsplash.com/photo-1615599849769-79a295861115?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    purpose: "Modernizar e humanizar o principal espaço de lazer da cidade, melhorando a qualidade de vida dos cidadãos e fomentando o turismo.",
+    description: "Projeto de revitalização urbana da orla da praia de Santos, abrangendo 5km de extensão. A obra incluiu a criação de uma nova ciclovia, modernização dos quiosques, novo projeto de paisagismo e iluminação, e melhorias na acessibilidade.",
+    image: "https://images.unsplash.com/photo-1615599849769-79a295861115?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    partners: ["Prefeitura Municipal de Santos"]
   },
   {
     category: "Residencial",
     name: "Condomínio Vista Verde",
     location: "Vinhedo, SP",
     year: "2022",
-    description: "Implantação de condomínio residencial horizontal com foco em sustentabilidade e integração com a natureza.",
-    image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    purpose: "Oferecer uma alternativa de moradia que integra a vida moderna com a natureza, priorizando a sustentabilidade e o bem-estar.",
+    description: "Implantação de um condomínio residencial horizontal com 80 lotes. O projeto se destaca pelo uso de materiais sustentáveis, sistemas de captação de energia solar e reuso de água, além de uma vasta área verde preservada.",
+    image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    partners: []
   },
   {
     category: "Ambiental",
     name: "Licenciamento de Aterro Sanitário",
     location: "Sorocaba, SP",
     year: "2024",
-    description: "Processo completo de licenciamento ambiental para a implantação de um novo aterro sanitário.",
-    image: "https://images.unsplash.com/photo-1611270418597-a6c77f4b7271?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    purpose: "Garantir que a implantação de um novo aterro sanitário siga as mais rigorosas normas ambientais, minimizando impactos e protegendo a saúde pública.",
+    description: "Conduzimos todo o processo de licenciamento ambiental, desde os estudos de viabilidade (EIA/RIMA) até a obtenção da Licença de Instalação (LI). O trabalho envolveu audiências públicas e um complexo estudo de geologia e hidrologia da região.",
+    image: "https://images.unsplash.com/photo-1611270418597-a6c77f4b7271?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    partners: ["Verde Vida Saneamento"]
+  },
+  {
+    category: "Ambiental",
+    name: "Monitoramento de Qualidade do Ar",
+    location: "Região Metropolitana, RJ",
+    year: "2024",
+    purpose: "Implementar uma rede de sensores para monitorar a qualidade do ar em tempo real, fornecendo dados cruciais para políticas públicas de saúde e meio ambiente.",
+    description: "Desenvolvimento e instalação de uma rede de monitoramento contínuo da qualidade do ar em pontos estratégicos da região metropolitana. O projeto utiliza sensores de alta precisão para medir poluentes como MP2.5, NO2 e O3, com dados disponibilizados ao público através de uma plataforma online.",
+    image: "https://images.unsplash.com/photo-1588502222535-3b7c4b4a64fd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    partners: ["Agência de Proteção Ambiental", "Universidade Federal do Rio de Janeiro"]
   }
 ];
 

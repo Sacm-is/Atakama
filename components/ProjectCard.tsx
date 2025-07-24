@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { COLORS } from '../constants';
 
@@ -8,26 +9,34 @@ interface ProjectCardProps {
     year: string;
     description: string;
     image: string;
+    purpose: string;
+    partners: string[];
+    onClick: () => void;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ category, name, location, year, image, description }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ category, name, location, year, image, onClick }) => {
     return (
-        <div className="group relative overflow-hidden rounded-xl shadow-lg h-96 block fade-in-up border border-slate-100">
-            <img
-                src={image}
-                alt={`Projeto ${name}`}
-                className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-            />
-            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/90 via-black/50 to-transparent transition-opacity duration-300"></div>
-            <div className="absolute top-0 left-0 w-full h-full p-6 flex flex-col justify-end">
-                <div className="transform transition-transform duration-500 group-hover:-translate-y-4">
-                    <span style={{backgroundColor: COLORS.primary}} className="inline-block text-white px-3 py-1 text-xs font-bold uppercase rounded-full mb-2 self-start">{category}</span>
-                    <h3 className="text-2xl font-bold text-white leading-tight drop-shadow-md">{name}</h3>
-                    <p className="text-sm text-slate-200">{location} - {year}</p>
+        <div 
+            onClick={onClick} 
+            className="group cursor-pointer rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 bg-white border border-slate-100 transform hover:-translate-y-1 flex flex-col"
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && onClick()}
+            aria-label={`Ver detalhes do projeto ${name}`}
+        >
+            <div className="relative overflow-hidden">
+                <img
+                    src={image}
+                    alt={`Projeto ${name}`}
+                    className="w-full h-64 object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                />
+                <div className="absolute top-4 left-4">
+                     <span style={{backgroundColor: COLORS.primary}} className="inline-block text-white px-3 py-1 text-xs font-bold uppercase rounded-full shadow-md">{category}</span>
                 </div>
-                <div className="max-h-0 opacity-0 group-hover:max-h-40 group-hover:opacity-100 group-hover:mt-4 transition-all duration-500 ease-in-out">
-                    <p className="text-slate-100 text-sm">{description}</p>
-                </div>
+            </div>
+            <div className="p-6 text-left flex-grow flex flex-col">
+                <h3 className="text-xl font-bold text-slate-800 leading-tight flex-grow">{name}</h3>
+                <p className="text-md text-slate-500 mt-2">{location} &bull; {year}</p>
             </div>
         </div>
     );

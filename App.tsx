@@ -14,7 +14,22 @@ import SectionSeparator from './components/SectionSeparator';
 import ScrollProgressBar from './components/ScrollProgressBar';
 
 const App: React.FC = () => {
-    const [showMainSite, setShowMainSite] = useState<boolean>(false);
+    const [isHeaderVisible, setIsHeaderVisible] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 100) {
+                setIsHeaderVisible(true);
+            } else {
+                setIsHeaderVisible(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     const scrollToSection = (sectionId: string) => {
         if (sectionId === 'inicio') {
@@ -26,47 +41,31 @@ const App: React.FC = () => {
             section.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     };
-    
-    const handleNavigateFromLanding = (sectionId: string) => {
-        setShowMainSite(true);
-        // Delay scroll to allow the main content to render and animations to start
-        setTimeout(() => {
-            scrollToSection(sectionId);
-        }, 100); 
-    };
 
     return (
         <div className="bg-white text-slate-700 min-h-screen">
-            {showMainSite && <ScrollProgressBar />}
-            <div className={`transition-opacity duration-1000 ${showMainSite ? 'opacity-0 pointer-events-none h-0' : 'opacity-100'}`}>
-                <Landing onNavigate={handleNavigateFromLanding} />
-            </div>
+            <ScrollProgressBar />
+            <Header onNavigate={scrollToSection} isVisible={isHeaderVisible} />
 
-            <div className={`fixed top-0 left-0 w-full transition-opacity duration-1000 ${showMainSite ? 'opacity-100 z-50' : 'opacity-0 pointer-events-none'}`}>
-                <Header onNavigate={scrollToSection} />
-            </div>
-
-            <main className={`transition-opacity duration-1000 ${showMainSite ? 'opacity-100' : 'opacity-0'}`}>
-                {showMainSite && (
-                    <>
-                        <div id="inicio" className="h-20"></div> {/* Spacer for header */}
-                        <About />
-                        <SectionSeparator />
-                        <CivilEngineering />
-                        <SectionSeparator reverse />
-                        <EnvironmentalEngineering />
-                        <SectionSeparator />
-                        <Certifications />
-                        <SectionSeparator reverse />
-                        <WorkWithUs />
-                        <SectionSeparator />
-                        <Contact />
-                        <Footer onNavigate={scrollToSection}/>
-                    </>
-                )}
+            <main>
+                <div id="inicio">
+                    <Landing onNavigate={scrollToSection} />
+                </div>
+                <About />
+                <SectionSeparator />
+                <CivilEngineering />
+                <SectionSeparator reverse />
+                <EnvironmentalEngineering />
+                <SectionSeparator />
+                <Certifications />
+                <SectionSeparator reverse />
+                <WorkWithUs />
+                <SectionSeparator />
+                <Contact />
+                <Footer onNavigate={scrollToSection}/>
             </main>
             
-            {showMainSite && <FloatingChat />}
+            <FloatingChat />
         </div>
     );
 };

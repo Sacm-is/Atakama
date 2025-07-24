@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Section from './Section';
 import ServiceCard from './ServiceCard';
@@ -6,12 +5,6 @@ import { TEXTS, CIVIL_SERVICES, COLORS } from '../constants';
 
 const CivilEngineering: React.FC = () => {
     const [activeCardIndex, setActiveCardIndex] = useState<number | null>(0);
-
-    const projectImages = [
-        'https://picsum.photos/seed/civil1/600/400',
-        'https://picsum.photos/seed/civil2/600/400',
-        'https://picsum.photos/seed/civil3/600/400',
-    ];
 
     return (
         <Section id="engenharia-civil" className="bg-white">
@@ -32,17 +25,6 @@ const CivilEngineering: React.FC = () => {
                         onClick={() => setActiveCardIndex(index)}
                     />
                 ))}
-            </div>
-
-            <div>
-                <h3 className="text-3xl font-bold text-center text-slate-800 mb-8">Projetos Realizados</h3>
-                <div className="grid md:grid-cols-3 gap-6">
-                    {projectImages.map((src, index) => (
-                        <div key={index} className="overflow-hidden rounded-xl shadow-lg group">
-                            <img src={src} alt={`Projeto de Engenharia Civil ${index + 1}`} className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-300"/>
-                        </div>
-                    ))}
-                </div>
             </div>
         </Section>
     );

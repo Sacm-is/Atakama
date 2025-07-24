@@ -4,9 +4,10 @@ import { COLORS } from '../constants';
 
 interface HeaderProps {
     onNavigate: (sectionId: string) => void;
+    isVisible: boolean;
 }
 
-const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
+const Header: React.FC<HeaderProps> = ({ onNavigate, isVisible }) => {
     const navLinks = [
         { id: 'sobre', label: 'SOBRE' },
         { id: 'engenharia-civil', label: 'CIVIL' },
@@ -17,7 +18,12 @@ const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
     ];
 
     return (
-        <header className="w-full backdrop-blur-lg shadow-md" style={{backgroundColor: '#667690'}}>
+        <header 
+            className={`fixed top-0 w-full z-40 backdrop-blur-lg shadow-md transition-all duration-500 ease-out ${
+                isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
+            }`}
+            style={{backgroundColor: '#667690'}}
+        >
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-20">
                     <div 

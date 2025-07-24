@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { COLORS, FacebookIcon, InstagramIcon, LinkedinIcon } from '../constants';
 
@@ -32,7 +33,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                         <h3 className="text-lg font-semibold text-white uppercase tracking-wider mb-4">Links Rápidos</h3>
                         <div className="grid grid-cols-2 gap-2" style={{color: COLORS.lightBg}}>
                              <button onClick={() => onNavigate('sobre')} className="transition-colors block" style={{'--hover-color': COLORS.primary} as React.CSSProperties} onMouseOver={(e) => e.currentTarget.style.color = 'var(--hover-color)'} onMouseOut={(e) => e.currentTarget.style.color = ''}>Sobre</button>
-                            <button onClick={() => onNavigate('projetos')} className="transition-colors block" style={{'--hover-color': COLORS.primary} as React.CSSProperties} onMouseOver={(e) => e.currentTarget.style.color = 'var(--hover-color)'} onMouseOut={(e) => e.currentTarget.style.color = ''}>Projetos</button>
+                            <button onClick={() => onNavigate('certificacoes')} className="transition-colors block" style={{'--hover-color': COLORS.primary} as React.CSSProperties} onMouseOver={(e) => e.currentTarget.style.color = 'var(--hover-color)'} onMouseOut={(e) => e.currentTarget.style.color = ''}>Certificações</button>
                             <button onClick={() => onNavigate('engenharia-civil')} className="transition-colors block" style={{'--hover-color': COLORS.primary} as React.CSSProperties} onMouseOver={(e) => e.currentTarget.style.color = 'var(--hover-color)'} onMouseOut={(e) => e.currentTarget.style.color = ''}>Civil</button>
                             <button onClick={() => onNavigate('engenharia-ambiental')} className="transition-colors block" style={{'--hover-color': COLORS.primary} as React.CSSProperties} onMouseOver={(e) => e.currentTarget.style.color = 'var(--hover-color)'} onMouseOut={(e) => e.currentTarget.style.color = ''}>Ambiental</button>
                             <button onClick={() => onNavigate('trabalhe-conosco')} className="transition-colors block" style={{'--hover-color': COLORS.primary} as React.CSSProperties} onMouseOver={(e) => e.currentTarget.style.color = 'var(--hover-color)'} onMouseOut={(e) => e.currentTarget.style.color = ''}>Carreiras</button>

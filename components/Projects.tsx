@@ -2,11 +2,15 @@ import React, { useState, useMemo } from 'react';
 import Section from './Section';
 import ProjectCard from './ProjectCard';
 import { PROJECTS, COLORS } from '../constants';
+import ProjectModal from './ProjectModal';
 
 const projectCategories = ["Todos", "Residencial", "Industrial", "Ambiental", "Obras Públicas"];
 
+type Project = typeof PROJECTS[0];
+
 const Projects: React.FC = () => {
     const [activeCategory, setActiveCategory] = useState("Todos");
+    const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
     const filteredProjects = useMemo(() => {
         if (activeCategory === "Todos") {
@@ -44,9 +48,17 @@ const Projects: React.FC = () => {
                     <ProjectCard
                         key={project.name + index}
                         {...project}
+                        onClick={() => setSelectedProject(project)}
                     />
                 ))}
             </div>
+            
+            {selectedProject && (
+                <ProjectModal 
+                    project={selectedProject} 
+                    onClose={() => setSelectedProject(null)} 
+                />
+            )}
         </Section>
     );
 };

@@ -15,7 +15,7 @@ const Section: React.FC<SectionProps> = ({ id, children, className = '' }) => {
         <section
             id={id}
             ref={sectionRef}
-            className={`w-full py-16 md:py-24 px-4 sm:px-6 lg:px-8 fade-in-up relative ${className}`}
+            className={`w-full py-16 md:py-24 px-4 sm:px-6 lg:px-8 fade-in-up relative scroll-mt-20 ${className}`}
         >
             <div className="container mx-auto">
                 {children}

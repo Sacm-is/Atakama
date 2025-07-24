@@ -1,6 +1,6 @@
 # 🌐 Site Institucional – Atakama Soluções Ambientais & Contrunção Civil
 
-Este repositório contém o código-fonte do site institucional da **Atakama Engenharia**, uma empresa que atua nos setores **civil e ambiental**. O site foi desenvolvido com foco em um design moderno, interativo e responsivo, com ênfase na identidade visual da marca e na experiência do usuário.
+Este repositório contém o código-fonte do site institucional da **Atakama Soluções Ambientais & Contrunção Civil**, uma empresa que atua nos setores **civil e ambiental**. O site foi desenvolvido com foco em um design moderno, interativo e responsivo, com ênfase na identidade visual da marca e na experiência do usuário.
 
 A plataforma apresenta os serviços da empresa de forma clara e estética, utilizando elementos visuais inovadores como carrossel de imagens, separadores personalizados, microinterações, efeitos visuais e estrutura responsiva. O layout foi projetado para se adaptar a diferentes dispositivos, garantindo uma navegação fluida em qualquer tela.
 
